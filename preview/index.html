@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Platform Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Left Rail -->
+    <aside class="rail">
+      <div class="logo" title="Home">CH</div>
+      <nav class="rail-nav">
+        <button class="rail-btn active" data-view="home" title="Home">
+          <span>🏠</span>
+        </button>
+        <button class="rail-btn" data-view="discovery" title="Discovery">
+          <span>🔎</span>
+        </button>
+        <button class="rail-btn" data-view="brand" title="Brand">
+          <span>🏷️</span>
+        </button>
+        <button class="rail-btn" data-view="analytics" title="Analytics">
+          <span>📊</span>
+        </button>
+        <div class="rail-divider"></div>
+        <button class="rail-btn" title="Notifications">
+          <span>🔔</span>
+        </button>
+        <button class="rail-btn" title="Profile">
+          <span>👤</span>
+        </button>
+      </nav>
+    </aside>
+
+    <!-- Secondary Sidebar -->
+    <aside class="secondary">
+      <div class="secondary-section">
+        <div class="section-title">Communities</div>
+        <div class="search">
+          <input placeholder="Search communities" />
+        </div>
+        <ul class="list">
+          <li class="item active">
+            <div class="avatar" style="--bg:#E6F0FF;color:#1765CC;">PR</div>
+            <div class="meta">
+              <div class="name">Product & PM</div>
+              <div class="sub">48,120 members</div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="avatar" style="--bg:#F0F9F4;color:#2E7D32;">EN</div>
+            <div class="meta">
+              <div class="name">Engineering</div>
+              <div class="sub">102,334 members</div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="avatar" style="--bg:#FFF8E1;color:#F57F17;">DS</div>
+            <div class="meta">
+              <div class="name">Data Science</div>
+              <div class="sub">36,980 members</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="secondary-section">
+        <div class="section-title">Subgroups</div>
+        <ul class="list compact">
+          <li class="chip active">Announcements</li>
+          <li class="chip">Feature Ideas</li>
+          <li class="chip">Hiring</li>
+          <li class="chip">AMA</li>
+          <li class="chip">Design Crits</li>
+        </ul>
+        <div class="divider"></div>
+        <div class="tiny-title">Your role</div>
+        <div class="pill">Moderator</div>
+      </div>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <main class="main">
+      <header class="topbar">
+        <div class="breadcrumbs">
+          <span class="crumb">Product & PM</span>
+          <span class="sep">/</span>
+          <span class="crumb">Announcements</span>
+        </div>
+        <div class="top-actions">
+          <div class="search large">
+            <input placeholder="Search people, posts, communities" />
+          </div>
+          <button class="btn primary">Create</button>
+        </div>
+      </header>
+
+      <!-- Views Container -->
+      <section class="views">
+        <!-- Home / Community Feed -->
+        <div class="view" id="view-home" data-active>
+          <div class="composer">
+            <div class="avatar sm">👤</div>
+            <textarea placeholder="Share an update with Announcements..."></textarea>
+            <div class="composer-actions">
+              <div class="left">
+                <button class="btn ghost">😀 Emoji</button>
+                <button class="btn ghost">📎 Attach</button>
+                <button class="btn ghost">@ Mention</button>
+              </div>
+              <div class="right">
+                <button class="btn">Preview</button>
+                <button class="btn primary">Post</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="feed">
+            <article class="card post">
+              <div class="post-head">
+                <div class="avatar">AL</div>
+                <div class="who">
+                  <div class="name">Alex Li</div>
+                  <div class="sub">Today • Moderator • #Announcements</div>
+                </div>
+                <div class="post-cta">
+                  <button class="btn ghost">⋯</button>
+                </div>
+              </div>
+              <h3 class="post-title">Quarterly Roadmap AMA</h3>
+              <p class="post-body">Join us Thursday at 9am PT for a live AMA on the Q3 roadmap. Add questions below. Recording will be shared afterwards.</p>
+              <div class="media-grid">
+                <div class="media image"></div>
+                <div class="media image"></div>
+                <div class="media image"></div>
+              </div>
+              <div class="post-foot">
+                <button class="btn ghost">👍 128</button>
+                <button class="btn ghost">💬 42</button>
+                <button class="btn ghost">📌 Pin</button>
+                <button class="btn ghost">Share</button>
+              </div>
+
+              <div class="thread">
+                <div class="comment">
+                  <div class="avatar sm">JS</div>
+                  <div class="bubble">
+                    <div class="meta">Jordan • 1h ago</div>
+                    <div class="text">Will hiring be covered? Curious about headcount for Platform.</div>
+                    <div class="actions">
+                      <button class="link">Reply</button>
+                      <button class="link">👍 6</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment">
+                  <div class="avatar sm">AL</div>
+                  <div class="bubble">
+                    <div class="meta">Alex • 35m ago</div>
+                    <div class="text">Yes! We’ll share the department breakdown and timelines.</div>
+                    <div class="actions">
+                      <button class="link">Reply</button>
+                      <button class="link">👍 11</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card post">
+              <div class="post-head">
+                <div class="avatar">MR</div>
+                <div class="who">
+                  <div class="name">Maria Rahman</div>
+                  <div class="sub">Yesterday • Member • #Announcements</div>
+                </div>
+              </div>
+              <h3 class="post-title">Community Guidelines Update</h3>
+              <p class="post-body">We’ve updated our moderation guidelines to improve clarity and safety. Please review the changes before posting.</p>
+              <div class="post-foot">
+                <button class="btn ghost">👍 89</button>
+                <button class="btn ghost">💬 18</button>
+                <button class="btn ghost">🔖 Save</button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Discovery View -->
+        <div class="view" id="view-discovery">
+          <div class="split">
+            <div class="pane">
+              <h2>Discover Communities</h2>
+              <div class="filters">
+                <div class="search large"><input placeholder="Search by topic, skill, or industry" /></div>
+                <div class="tags">
+                  <span class="chip">Product</span>
+                  <span class="chip">Data</span>
+                  <span class="chip">AI</span>
+                  <span class="chip">Marketing</span>
+                  <span class="chip">Design</span>
+                  <span class="chip">Finance</span>
+                </div>
+              </div>
+              <div class="grid three">
+                <div class="card community">
+                  <div class="banner"></div>
+                  <div class="row">
+                    <div class="avatar">AI</div>
+                    <div>
+                      <div class="title">AI Professionals</div>
+                      <div class="sub">21,004 members • Global</div>
+                    </div>
+                  </div>
+                  <p>Applied AI across industries. Weekly demos, hiring, and study groups.</p>
+                  <button class="btn primary">Join</button>
+                </div>
+                <div class="card community">
+                  <div class="banner"></div>
+                  <div class="row">
+                    <div class="avatar">PM</div>
+                    <div>
+                      <div class="title">Product Leaders</div>
+                      <div class="sub">64,552 members • Remote-first</div>
+                    </div>
+                  </div>
+                  <p>Frameworks, case studies, and mentorship for product managers.</p>
+                  <button class="btn">Preview</button>
+                </div>
+                <div class="card community">
+                  <div class="banner"></div>
+                  <div class="row">
+                    <div class="avatar">DS</div>
+                    <div>
+                      <div class="title">Data Science</div>
+                      <div class="sub">36,980 members • NYC</div>
+                    </div>
+                  </div>
+                  <p>ML ops, notebooks, and real-world pipelines. Hands-on cohorts.</p>
+                  <button class="btn">Preview</button>
+                </div>
+              </div>
+            </div>
+            <div class="pane side">
+              <h3>Location-aware picks</h3>
+              <ul class="list">
+                <li class="item">
+                  <div class="avatar" style="--bg:#E6F0FF;color:#1765CC;">NY</div>
+                  <div class="meta">
+                    <div class="name">NYC Tech</div>
+                    <div class="sub">14 mi away • Weekly meetups</div>
+                  </div>
+                  <button class="btn sm">Join</button>
+                </li>
+                <li class="item">
+                  <div class="avatar" style="--bg:#FFF3F0;color:#E65100;">BK</div>
+                  <div class="meta">
+                    <div class="name">Brooklyn Startups</div>
+                    <div class="sub">8 mi away • Founders</div>
+                  </div>
+                  <button class="btn sm">Join</button>
+                </li>
+              </ul>
+              <div class="divider"></div>
+              <h3>For you</h3>
+              <ul class="bullets">
+                <li>Threads on prioritization frameworks</li>
+                <li>Design-to-dev handoff best practices</li>
+                <li>Study group: LLM evals</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Brand View -->
+        <div class="view" id="view-brand">
+          <div class="split">
+            <div class="pane">
+              <h2>Brand Management</h2>
+              <div class="brand-header">
+                <div class="brand-avatar">AC</div>
+                <div>
+                  <div class="title">Acme Inc.</div>
+                  <div class="sub">Verified • @acme</div>
+                </div>
+                <div class="grow"></div>
+                <button class="btn">Edit Profile</button>
+                <button class="btn primary">New Post</button>
+              </div>
+
+              <div class="tabs">
+                <button class="tab active" data-tab="calendar">Calendar</button>
+                <button class="tab" data-tab="assets">Assets</button>
+                <button class="tab" data-tab="approvals">Approvals</button>
+              </div>
+
+              <div class="tabpane" data-tabpane="calendar" data-active>
+                <div class="calendar">
+                  <div class="cal-row">
+                    <div class="slot">
+                      <div class="slot-title">Mon</div>
+                      <div class="slot-item primary">Launch teaser</div>
+                    </div>
+                    <div class="slot">
+                      <div class="slot-title">Tue</div>
+                      <div class="slot-item">Design AMA</div>
+                    </div>
+                    <div class="slot">
+                      <div class="slot-title">Wed</div>
+                      <div class="slot-item">Case study thread</div>
+                    </div>
+                    <div class="slot">
+                      <div class="slot-title">Thu</div>
+                      <div class="slot-item">Hiring post</div>
+                    </div>
+                    <div class="slot">
+                      <div class="slot-title">Fri</div>
+                      <div class="slot-item">Release notes</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tabpane" data-tabpane="assets">
+                <div class="grid three">
+                  <div class="card asset">
+                    <div class="thumb logo"></div>
+                    <div class="title">Primary Logo</div>
+                    <button class="btn sm">Use</button>
+                  </div>
+                  <div class="card asset">
+                    <div class="thumb banner"></div>
+                    <div class="title">Header Banner</div>
+                    <button class="btn sm">Use</button>
+                  </div>
+                  <div class="card asset">
+                    <div class="thumb tone"></div>
+                    <div class="title">Tone Guidelines</div>
+                    <button class="btn sm">View</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tabpane" data-tabpane="approvals">
+                <div class="list">
+                  <div class="item">
+                    <div class="meta">
+                      <div class="name">Release notes draft</div>
+                      <div class="sub">Awaiting approval • Maria</div>
+                    </div>
+                    <div class="grow"></div>
+                    <button class="btn sm">Approve</button>
+                    <button class="btn sm">Request changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pane side">
+              <h3>Brand Health</h3>
+              <div class="kpis">
+                <div class="kpi">
+                  <div class="num">+18%</div>
+                  <div class="label">Engagement</div>
+                </div>
+                <div class="kpi">
+                  <div class="num">12.4k</div>
+                  <div class="label">Reach</div>
+                </div>
+                <div class="kpi">
+                  <div class="num">92</div>
+                  <div class="label">Mentions</div>
+                </div>
+              </div>
+              <div class="divider"></div>
+              <h3>Recent Posts</h3>
+              <ul class="bullets">
+                <li>Case Study: API Observability</li>
+                <li>Design System v2</li>
+                <li>Q&A: Onboarding tips</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Analytics View -->
+        <div class="view" id="view-analytics">
+          <h2>Community Analytics</h2>
+          <div class="grid three">
+            <div class="card metric">
+              <div class="row">
+                <div>
+                  <div class="title">DAU</div>
+                  <div class="big">8,214</div>
+                </div>
+                <div class="spark" data-kind="blue"></div>
+              </div>
+              <div class="sub">+6.3% WoW</div>
+            </div>
+            <div class="card metric">
+              <div class="row">
+                <div>
+                  <div class="title">Posts / Day</div>
+                  <div class="big">1,128</div>
+                </div>
+                <div class="spark" data-kind="green"></div>
+              </div>
+              <div class="sub">Stable</div>
+            </div>
+            <div class="card metric">
+              <div class="row">
+                <div>
+                  <div class="title">Avg. Response Time</div>
+                  <div class="big">34m</div>
+                </div>
+                <div class="spark" data-kind="orange"></div>
+              </div>
+              <div class="sub">-12% WoW</div>
+            </div>
+          </div>
+
+          <div class="grid two">
+            <div class="card chart">
+              <div class="title">Engagement by Subgroup</div>
+              <div class="bars">
+                <div class="bar"><span style="width: 76%"></span><label>Announcements</label></div>
+                <div class="bar"><span style="width: 42%"></span><label>Feature Ideas</label></div>
+                <div class="bar"><span style="width: 61%"></span><label>Hiring</label></div>
+                <div class="bar"><span style="width: 33%"></span><label>AMA</label></div>
+                <div class="bar"><span style="width: 54%"></span><label>Design Crits</label></div>
+              </div>
+            </div>
+            <div class="card chart">
+              <div class="title">Top Topics</div>
+              <ul class="bullets">
+                <li>Prioritization</li>
+                <li>LLM Productization</li>
+                <li>Roadmapping</li>
+                <li>Career Growth</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Right Sidebar -->
+    <aside class="right">
+      <div class="right-section">
+        <div class="section-title">Members</div>
+        <ul class="list">
+          <li class="item">
+            <div class="avatar sm online">AL</div>
+            <div class="meta">
+              <div class="name">Alex Li</div>
+              <div class="sub">Online</div>
+            </div>
+            <button class="btn sm">DM</button>
+          </li>
+          <li class="item">
+            <div class="avatar sm idle">MR</div>
+            <div class="meta">
+              <div class="name">Maria Rahman</div>
+              <div class="sub">Idle</div>
+            </div>
+            <button class="btn sm">DM</button>
+          </li>
+          <li class="item">
+            <div class="avatar sm dnd">JS</div>
+            <div class="meta">
+              <div class="name">Jordan Smith</div>
+              <div class="sub">DND</div>
+            </div>
+            <button class="btn sm">DM</button>
+          </li>
+        </ul>
+      </div>
+      <div class="right-section">
+        <div class="section-title">Upcoming</div>
+        <ul class="list compact">
+          <li class="item">
+            <div class="meta">
+              <div class="name">Roadmap AMA</div>
+              <div class="sub">Thu • 9:00 AM PT</div>
+            </div>
+            <button class="btn sm">RSVP</button>
+          </li>
+          <li class="item">
+            <div class="meta">
+              <div class="name">Design Crits</div>
+              <div class="sub">Fri • 12:30 PM</div>
+            </div>
+            <button class="btn sm">RSVP</button>
+          </li>
+        </ul>
+      </div>
+      <div class="right-section">
+        <div class="section-title">Insights</div>
+        <div class="insights">
+          <div class="insight">
+            <div class="label">Active now</div>
+            <div class="value">438</div>
+          </div>
+          <div class="insight">
+            <div class="label">New members</div>
+            <div class="value">+182</div>
+          </div>
+          <div class="insight">
+            <div class="label">Reports</div>
+            <div class="value">3</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
