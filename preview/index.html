@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <div class="app">
+  <div class="app" id="app-root">
     <!-- Left Rail -->
     <aside class="rail">
       <div class="logo" title="Home">CH</div>
@@ -28,10 +28,10 @@
           <span>📊</span>
         </button>
         <div class="rail-divider"></div>
-        <button class="rail-btn" title="Notifications">
+        <button class="rail-btn" id="btn-notify" title="Notifications">
           <span>🔔</span>
         </button>
-        <button class="rail-btn" title="Profile">
+        <button class="rail-btn" id="btn-profile" title="Profile">
           <span>👤</span>
         </button>
       </nav>
@@ -93,9 +93,10 @@
         </div>
         <div class="top-actions">
           <div class="search large">
-            <input placeholder="Search people, posts, communities" />
+            <input id="global-search" placeholder="Search people, posts, communities" />
           </div>
-          <button class="btn primary">Create</button>
+          <button class="btn" id="btn-compact">Compact</button>
+          <button class="btn primary" id="btn-create">Create</button>
         </div>
       </header>
 
@@ -105,7 +106,7 @@
         <div class="view" id="view-home" data-active>
           <div class="composer">
             <div class="avatar sm">👤</div>
-            <textarea placeholder="Share an update with Announcements..."></textarea>
+            <textarea id="composer-input" placeholder="Share an update with Announcements..."></textarea>
             <div class="composer-actions">
               <div class="left">
                 <button class="btn ghost">😀 Emoji</button>
@@ -113,10 +114,11 @@
                 <button class="btn ghost">@ Mention</button>
               </div>
               <div class="right">
-                <button class="btn">Preview</button>
-                <button class="btn primary">Post</button>
+                <button class="btn" id="btn-preview">Preview</button>
+                <button class="btn primary" id="btn-post">Post</button>
               </div>
             </div>
+            <div class="typing" id="typing-indicator" aria-live="polite" hidden>Several members are typing…</div>
           </div>
 
           <div class="feed">
@@ -196,7 +198,7 @@
             <div class="pane">
               <h2>Discover Communities</h2>
               <div class="filters">
-                <div class="search large"><input placeholder="Search by topic, skill, or industry" /></div>
+                <div class="search large"><input id="discovery-search" placeholder="Search by topic, skill, or industry" /></div>
                 <div class="tags">
                   <span class="chip">Product</span>
                   <span class="chip">Data</span>
@@ -444,6 +446,10 @@
               </ul>
             </div>
           </div>
+          <div class="insight-row">
+            <div>Active now</div>
+            <div class="value" id="active-now">438</div>
+          </div>
         </div>
       </section>
     </main>
@@ -518,6 +524,21 @@
     </aside>
   </div>
 
-  <script src="./app.js"></script>
+  <!-- Command Palette Modal -->
+  <div class="modal" id="cmdk" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-content" role="document">
+      <div class="cmdk">
+        <input id="cmdk-input" placeholder="Type a command (e.g., Home, Discovery, Toggle Compact)" aria-label="Command" />
+        <ul id="cmdk-list" role="listbox" aria-label="Commands"></ul>
+        <div class="hint">Press Esc to close • ↑/↓ to navigate • Enter to run</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toasts -->
+  <div id="toaster" aria-live="polite" aria-atomic="true"></div>
+
+  <script type="module" src="./dist/app.js"></script>
 </body>
 </html>

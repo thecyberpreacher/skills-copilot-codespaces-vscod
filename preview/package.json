@@ -1,0 +1,12 @@
+{
+  "name": "platform-preview",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p .",
+    "dev": "npm run build && python3 -m http.server 8080 --directory ."
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
