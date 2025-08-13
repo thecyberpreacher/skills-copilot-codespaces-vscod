@@ -4,12 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Platform Preview</title>
+  <meta name="description" content="A centralized professional community platform preview with real-time collaboration, discovery, brand management, and analytics." />
+  <meta name="theme-color" content="#1A73E8" />
+  <meta name="color-scheme" content="light" />
+  <meta property="og:title" content="Platform Preview" />
+  <meta property="og:description" content="Professional communities, unified." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/icon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/assets/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/assets/icon.svg" />
+  <link rel="mask-icon" href="/assets/icon.svg" color="#1A73E8" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
+  <a href="#view-home" class="sr-only">Skip to content</a>
   <div class="app" id="app-root">
     <!-- Left Rail -->
     <aside class="rail">
@@ -538,6 +551,12 @@
 
   <!-- Toasts -->
   <div id="toaster" aria-live="polite" aria-atomic="true"></div>
+
+  <noscript>
+    <div style="padding:12px;background:#fff3e0;border:1px solid #ffe0b2;margin:12px;border-radius:8px;">
+      This application requires JavaScript to run. Please enable JavaScript.
+    </div>
+  </noscript>
 
   <script type="module" src="./dist/app.js"></script>
 </body>

@@ -14,7 +14,10 @@
   --shadow: 0 1px 2px rgba(10,37,64,.05), 0 8px 24px rgba(10,37,64,.08);
 }
 
-* { box-sizing: border-box; }
+*,:before,:after { box-sizing: border-box; }
+:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+
 html, body { height: 100%; }
 body {
   margin: 0;
@@ -221,3 +224,7 @@ body.compact .app { grid-template-columns: 60px 240px 1fr 280px; }
 .toast.success { background: #1b5e20; }
 .toast.info { background: #1765cc; }
 .toast.warn { background: #e65100; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

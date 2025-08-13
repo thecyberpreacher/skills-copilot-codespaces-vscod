@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "builds": [{ "src": "index.html", "use": "@vercel/static" }],
+  "routes": [
+    { "src": "/(.*)", "dest": "/$1" }
+  ],
+  "ignoreCommand": "echo Using repo .vercelignore if present",
+  "installCommand": "npm ci",
+  "buildCommand": "npm run build"
+}

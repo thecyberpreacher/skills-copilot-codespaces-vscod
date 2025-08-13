@@ -1,0 +1,5 @@
+/
+/index.html
+/discovery
+/brand
+/analytics
